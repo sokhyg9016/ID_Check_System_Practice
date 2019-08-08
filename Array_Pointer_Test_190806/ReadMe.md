@@ -23,3 +23,20 @@
 
 > 주요 동작 함수
 
+```c
+
+/*Functions*/
+void Init(ID_DB* list, int size); /* 초기화 */
+int Is_Full(ID_DB* list); /* ID를 저장할 공간에 크기에 대한 검사 */
+int Is_ID_Duplicated(ID_DB* list, const char* str); /* ID 중복 검사 */
+int Validate_ID(const char* str, int size); /* 아이디 형식 검사(첫 글자 특수문자X, 영어 - 대문자, 소문자, 숫자 등) */
+int Get_ID(char* str); /* 입력 함수 */
+int Input_ID(ID_DB* list); /* 전체 입력 함수 (ID에 대한 검사 및 입력, 저장) */
+int Compare_ID(const void* v1, const void* v2); /* qsort 용 비교 함수 */
+void View_ID(ID_DB* list); /* 출력 함수 */
+
+//Test the system
+void Test_ID_SYS(); /* 시스템 테스트 함수 */
+
+```
+
